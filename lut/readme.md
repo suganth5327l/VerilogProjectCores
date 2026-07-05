@@ -8,5 +8,5 @@
 > 
 > Or of the Cadence Design Suite with irun ,RTL Ulter Compiler, Encounter RTL-GDSII  and Virtuoso with gpdk90.
 > 
-> **Things to Do**
+ **Things to Do**
 > I will also add a text file saying the list and order of commands I did.
