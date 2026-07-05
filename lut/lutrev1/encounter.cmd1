@@ -1,0 +1,105 @@
+#######################################################
+#                                                     #
+#  Encounter Command Logging File                     #
+#  Created on Mon Jul  6 00:28:33 2026                #
+#                                                     #
+#######################################################
+
+#@(#)CDS: Encounter v13.10-p003_1 (32bit) 04/17/2013 15:43 (Linux 2.6)
+#@(#)CDS: NanoRoute v13.10-p002 NR130329-0035/13_10-UB (database version 2.30, 190.4.1) {superthreading v1.19}
+#@(#)CDS: CeltIC v13.10-p007_1 (32bit) 04/10/2013 11:52:21 (Linux 2.6.18-194.el5)
+#@(#)CDS: AAE 13.10-p003 (32bit) 04/17/2013 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 13.10-p009_1 (32bit) Apr 10 2013 05:45:06 (Linux 2.6.18-194.el5)
+#@(#)CDS: CPE v13.10-p010
+#@(#)CDS: IQRC/TQRC 12.1.0-s388 (32bit) Fri Mar 29 14:17:34 PDT 2013 (Linux 2.6.18-194.el5)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+set init_top_cell lut
+set init_lef_file /home/buet/cadence/EDI/share/FoundationFlows/EXAMPLES/EDI/DESIGN/GPDK/LIBS/GPDK045/gsclib045.lef
+set init_verilog /home/buet/vlsimp/suganth/lut/rev1/lut_netlist.v
+set init_pwr_net VDD
+set init_gnd_net VSS
+init_design
+floorPlan -site CoreSite -r 1.0 0.7 20 20 20 20
+placeDesign
+routeDesign
+verifyGeometry
+verifyConnectivity
+win
+selectInst g63
+deselectAll
+selectInst g63
+panCenter 21.884 23.778
+panCenter 21.062 23.884
+windowSelect 20.795 24.240 20.192 24.054
+panCenter 25.771 21.939
+panCenter 34.586 21.963
+panCenter 39.248 20.780
+panCenter 35.861 19.087
+panCenter 29.088 17.325
+panCenter 23.753 19.018
+uiSetTool move
+panCenter 8.888 18.134
+panCenter -3.644 20.311
+panCenter 11.600 21.689
+panCenter 28.755 23.155
+panCenter 30.355 10.626
+panCenter 29.820 23.475
+panCenter 11.082 38.465
+panCenter 23.520 22.569
+setLayerPreference pinObj -isVisible 1
+setLayerPreference cellBlkgObj -isVisible 1
+setLayerPreference layoutObj -isVisible 1
+setLayerPreference mGrid -isVisible 1
+setLayerPreference pGrid -isVisible 1
+setLayerPreference userGrid -isVisible 1
+setLayerPreference gcell -isVisible 1
+setLayerPreference mGrid -isVisible 0
+setLayerPreference pGrid -isVisible 0
+setLayerPreference userGrid -isVisible 0
+setLayerPreference gcell -isVisible 0
+setLayerPreference trackObj -isVisible 1
+setLayerPreference nonPrefTrackObj -isVisible 1
+setLayerPreference trackObj -isVisible 0
+setLayerPreference nonPrefTrackObj -isVisible 0
+panCenter 25.233 23.259
+setLayerPreference blackBox -isVisible 0
+setLayerPreference blackBox -isSelectable 0
+setLayerPreference areaIo -isVisible 0
+setLayerPreference areaIo -isVisible 1
+setLayerPreference mGrid -isVisible 1
+setLayerPreference pGrid -isVisible 1
+setLayerPreference userGrid -isVisible 1
+setLayerPreference gcell -isVisible 1
+setLayerPreference mGrid -isVisible 0
+setLayerPreference pGrid -isVisible 0
+setLayerPreference userGrid -isVisible 0
+setLayerPreference gcell -isVisible 0
+setLayerPreference mGrid -isVisible 1
+setLayerPreference pGrid -isVisible 1
+setLayerPreference userGrid -isVisible 1
+setLayerPreference gcell -isVisible 1
+setLayerPreference mGrid -isVisible 0
+setLayerPreference pGrid -isVisible 0
+setLayerPreference userGrid -isVisible 0
+setLayerPreference gcell -isVisible 0
+setLayerPreference blackBox -isVisible 1
+setLayerPreference inst -isVisible 0
+setLayerPreference inst -isVisible 1
+setLayerPreference block -isVisible 0
+setLayerPreference stdCell -isVisible 0
+setLayerPreference coverCell -isVisible 0
+setLayerPreference block -isVisible 1
+setLayerPreference stdCell -isVisible 1
+setLayerPreference coverCell -isVisible 1
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+selectInst g62
+setObjFPlanBox Instance g62 23.2175 23.563 24.4175 25.273
+setObjFPlanBox Instance g62 20.018 23.573 21.218 25.283
+setObjFPlanBox Instance g62 23.0405 23.56 24.2405 25.27

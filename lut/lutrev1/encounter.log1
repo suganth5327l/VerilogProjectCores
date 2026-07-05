@@ -1,0 +1,654 @@
+Checking out Encounter license ...
+Encounter_Digital_Impl_Sys_XL 13.1 license checkout succeeded.
+You can run 2 CPU jobs with the base license that is currently checked out.
+If required, use the setMultiCpuUsage command to enable multi-CPU processing.
+**ERROR: (ENCOAX-142):	Could not open shared library libfeoax22.so : /home/buet/cadence/EDI/tools/lib/libfeoax22.so: undefined symbol: _ZN12OpenAccess_48oaAppDef9getAppDefILj237EEEPS0_RKNS_8oaStringEjjNS_8oaDomainEiiijPKvPKNS_14oaAppObjectDefE
+
+**ERROR: (ENCOAX-142):	OA features will be disabled in this session.
+
+
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2013.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: Encounter v13.10-p003_1 (32bit) 04/17/2013 15:43 (Linux 2.6)
+@(#)CDS: NanoRoute v13.10-p002 NR130329-0035/13_10-UB (database version 2.30, 190.4.1) {superthreading v1.19}
+@(#)CDS: CeltIC v13.10-p007_1 (32bit) 04/10/2013 11:52:21 (Linux 2.6.18-194.el5)
+@(#)CDS: AAE 13.10-p003 (32bit) 04/17/2013 (Linux 2.6.18-194.el5)
+@(#)CDS: CTE 13.10-p009_1 (32bit) Apr 10 2013 05:45:06 (Linux 2.6.18-194.el5)
+@(#)CDS: CPE v13.10-p010
+@(#)CDS: IQRC/TQRC 12.1.0-s388 (32bit) Fri Mar 29 14:17:34 PDT 2013 (Linux 2.6.18-194.el5)
+--- Starting "Encounter v13.10-p003_1" on Mon Jul  6 00:28:32 2026 (mem=56.2M) ---
+--- Running on cadence (i686 w/Linux 2.6.32-431.3.1.el6.i686) ---
+This version was compiled on Wed Apr 17 15:43:05 PDT 2013.
+Set DBUPerIGU to 1000.
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+Sourcing tcl/tk file "/home/buet/vlsimp/suganth/lut/rev1/encounter.tcl" ...
+<CMD> set init_top_cell lut
+<CMD> set init_lef_file /home/buet/cadence/EDI/share/FoundationFlows/EXAMPLES/EDI/DESIGN/GPDK/LIBS/GPDK045/gsclib045.lef
+<CMD> set init_verilog /home/buet/vlsimp/suganth/lut/rev1/lut_netlist.v
+<CMD> set init_pwr_net VDD
+<CMD> set init_gnd_net VSS
+<CMD> init_design
+**ERROR: (ENCOAX-820):	The OA features are disabled in the current session of Encounter because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Encounter either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+
+**ERROR: (ENCOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+
+Loading LEF file /home/buet/cadence/EDI/share/FoundationFlows/EXAMPLES/EDI/DESIGN/GPDK/LIBS/GPDK045/gsclib045.lef...
+Set DBUPerIGU to M2 pitch 400.
+
+viaInitial starts at Mon Jul  6 00:28:33 2026
+viaInitial ends at Mon Jul  6 00:28:33 2026
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '/home/buet/vlsimp/suganth/lut/rev1/lut_netlist.v'
+
+*** Memory Usage v#7 (Current mem = 211.523M, initial mem = 56.227M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=211.5M) ***
+Set top cell to lut.
+*** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.06min, fe_real=0.07min, fe_mem=211.7M) ***
+
+{DETAILMESSAGE}Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell lut ...
+*** Netlist is unique.
+** info: there are 491 modules.
+** info: there are 6 stdCell insts.
+
+*** Memory Usage v#7 (Current mem = 213.918M, initial mem = 56.227M) ***
+Horizontal Layer M1 offset = 190 (derived)
+Vertical Layer M2 offset = 200 (derived)
+Generated pitch 0.2 in Metal9 is different from 0.33 defined in technology file in unpreferred direction.
+Generated pitch 0.38 in Metal9 is different from 0.33 defined in technology file in preferred direction.
+Generated pitch 0.285 in Metal8 is different from 0.2 defined in technology file in unpreferred direction.
+Generated pitch 0.285 in Metal7 is different from 0.2 defined in technology file in preferred direction.
+Generated pitch 0.19 in Metal6 is different from 0.2 defined in technology file in unpreferred direction.
+Generated pitch 0.19 in Metal5 is different from 0.2 defined in technology file in preferred direction.
+Generated pitch 0.19 in Metal4 is different from 0.2 defined in technology file in unpreferred direction.
+Generated pitch 0.19 in Metal3 is different from 0.2 defined in technology file in preferred direction.
+Generated pitch 0.19 in Metal2 is different from 0.2 defined in technology file in unpreferred direction.
+Generated pitch 0.2 in Metal1 is different from 0.19 defined in technology file in unpreferred direction.
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Input Pin Transition Delay as 0.1 ps.
+
+**WARN: (ENCSYT-7328):	Active setup and hold analysis views were not provided by the -setup and -hold arguments to initDesign. The system requires at least one active setup and hold analysis view to be declared before any timing commands can be run. If you need to run timing commands, you can add the -setup and -hold options to your init_design invocation.  You can use the all_analysis_view command to identify the currently available views.
+<CMD> floorPlan -site CoreSite -r 1.0 0.7 20 20 20 20
+Adjusting Core to Bottom to: 20.1400.
+Horizontal Layer M1 offset = 190 (derived)
+Vertical Layer M2 offset = 200 (derived)
+Generated pitch 0.2 in Metal9 is different from 0.33 defined in technology file in unpreferred direction.
+Generated pitch 0.38 in Metal9 is different from 0.33 defined in technology file in preferred direction.
+Generated pitch 0.285 in Metal8 is different from 0.2 defined in technology file in unpreferred direction.
+Generated pitch 0.285 in Metal7 is different from 0.2 defined in technology file in preferred direction.
+Generated pitch 0.19 in Metal6 is different from 0.2 defined in technology file in unpreferred direction.
+Generated pitch 0.19 in Metal5 is different from 0.2 defined in technology file in preferred direction.
+Generated pitch 0.19 in Metal4 is different from 0.2 defined in technology file in unpreferred direction.
+Generated pitch 0.19 in Metal3 is different from 0.2 defined in technology file in preferred direction.
+Generated pitch 0.19 in Metal2 is different from 0.2 defined in technology file in unpreferred direction.
+Generated pitch 0.2 in Metal1 is different from 0.19 defined in technology file in unpreferred direction.
+<CMD> placeDesign
+**WARN: (ENCSP-9513):	Timing constraint file does not exist
+**WARN: (ENCSP-9514):	NonTimingDriven placement will be performed
+*** Starting placeDesign default flow ***
+*** Start deleteBufferTree ***
+Info: Detect buffers to remove automatically.
+Analyzing netlist ...
+Updating netlist
+
+*summary: 0 instances (buffers/inverters) removed
+*** Finish deleteBufferTree (0:00:00.0) ***
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Extracting macro/IO cell pins and blockage ...... 
+Pin and blockage extraction finished
+*** Starting "NanoPlace(TM) placement v#14 (mem=217.4M)" ...
+Options: clkGateAware ignoreScan ignoreSpare pinGuide congEffort=auto gpeffort=medium 
+**WARN: (ENCSP-9042):	Scan chains were not defined, -ignoreScan option will be ignored.
+Define the scan chains before using this option.
+#std cell=6 #block=0 (0 floating + 0 preplaced) #ioInst=0 #net=10 #term=25 #term/net=2.50, #fixedIo=0, #floatIo=0, #fixedPin=0, #floatPin=5
+stdCell: 6 single + 0 double + 0 multi
+Total standard cell length = 0.0110 (mm), area = 0.0000 (mm^2)
+**Info: (ENCSP-307): Design contains fractional 17 cells.
+Average module density = 0.705.
+Density for the design = 0.705.
+       = stdcell_area 55 sites (19 um^2) / alloc_area 78 sites (27 um^2).
+Pin Density = 0.455.
+            = total # of pins 25 / total Instance area 55.
+Clock gating cells determined by native netlist tracing.
+Iteration  1: Total net bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              Est.  stn bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 217.9M
+Iteration  2: Total net bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              Est.  stn bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 217.9M
+Iteration  3: Total net bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              Est.  stn bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 217.9M
+Iteration  4: Total net bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              Est.  stn bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 217.9M
+Iteration  5: Total net bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              Est.  stn bbox = 0.000e+00 (0.00e+00 0.00e+00)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 217.9M
+Iteration  6: Total net bbox = 1.152e+02 (1.13e+02 1.90e+00)
+              Est.  stn bbox = 1.187e+02 (1.17e+02 1.94e+00)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 217.9M
+*** cost = 1.152e+02 (1.13e+02 1.90e+00) (cpu for global=0:00:00.0) real=0:00:00.0***
+Info: 0 clock gating cells identified, 0 (on average) moved
+Core Placement runtime cpu: 0:00:00.0 real: 0:00:00.0
+**Info: (ENCSP-307): Design contains fractional 17 cells.
+Starting refinePlace ...
+move report: placeLevelShifters moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+  Spread Effort: high, pre-route mode.
+[CPU] RefinePlace/preRPlace (cpu=0:00:00.0, real=0:00:00.0, mem=218.0MB) @(0:00:03.8 - 0:00:03.8).
+move report: preRPlace moves 6 insts, mean move: 2.06 um, max move: 2.71 um
+	max move on inst (i4/g2): (21.40, 21.85) --> (22.40, 20.14)
+wireLenOptFixPriorityInst 0 inst fixed
+Placement tweakage begins.
+wire length = 1.315e+02 = 5.313e+01 H + 7.838e+01 V
+wire length = 1.281e+02 = 4.930e+01 H + 7.875e+01 V
+Placement tweakage ends.
+move report: tweak moves 4 insts, mean move: 2.85 um, max move: 4.51 um
+	max move on inst (i1/g9): (21.40, 20.14) --> (24.20, 21.85)
+Clock gating cells determined by native netlist tracing.
+Wire length optimization begins.
+Wire length optimization ends. (0:00:00.0)
+move report: xdp moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+[CPU] RefinePlace/WireLenOpt (cpu=0:00:00.0, real=0:00:00.0, mem=218.0MB) @(0:00:03.8 - 0:00:03.8).
+[CPU] RefinePlace/Legalization (cpu=0:00:00.0, real=0:00:00.0, mem=218.0MB) @(0:00:03.8 - 0:00:03.8).
+move report: rPlace moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+move report: overall moves 6 insts, mean move: 2.06 um, max move: 2.71 um
+	max move on inst (i4/g2): (21.40, 21.85) --> (22.40, 20.14)
+Statistics of distance of Instance movement in detailed placement:
+  maximum (X+Y) =         2.71 um
+  inst (i4/g2) with max move: (21.4, 21.85) -> (22.4, 20.14)
+  mean    (X+Y) =         2.06 um
+Total instances moved : 6
+*** cpu=0:00:00.0   mem=218.0M  mem(used)=0.1M***
+[CPU] RefinePlace/total (cpu=0:00:00.0, real=0:00:00.0, mem=218.0MB) @(0:00:03.8 - 0:00:03.8).
+Total net length = 1.281e+02 (4.930e+01 7.875e+01) (ext = 1.190e+02)
+*** End of Placement (cpu=0:00:00.1, real=0:00:00.0, mem=218.0M) ***
+**Info: (ENCSP-307): Design contains fractional 17 cells.
+default core: bins with density >  0.75 =    0 % ( 0 / 1 )
+Starting IO pin assignment...
+Completed IO pin assignment.
+**WARN: (ENCSP-9025):	No scan chain specified/traced.
+Starting congestion repair ...
+*** Starting trialRoute (mem=218.8M) ***
+
+There are 0 guide points passed to trialRoute for fixed pins.
+There are 0 guide points passed to trialRoute for pinGroup/netGroup/pinGuide pins.
+Options:  -noPinGuide
+
+**WARN: (ENCTR-3823):	The standard cell row height appears to be too small.
+Estimated standard cell row height = 0.8 metal3 tracks
+
+Phase 1a-1d Overflow: 0.00% H + 0.00% V (0:00:00.0 221.2M)
+
+Overflow: 0.00% H + 0.00% V (0:00:00.0 221.8M)
+
+Phase 1l Overflow: 0.00% H + 0.00% V (0:00:00.0 221.8M)
+
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+--------------------------------------
+  5:	1023	100.00%	1023	100.00%
+
+
+Total length: 1.247e+02um, number of vias: 33
+M1(H) length: 0.000e+00um, number of vias: 20
+M2(V) length: 5.519e+01um, number of vias: 13
+M3(H) length: 6.954e+01um, number of vias: 0
+M4(V) length: 0.000e+00um, number of vias: 0
+M5(H) length: 0.000e+00um, number of vias: 0
+M6(V) length: 0.000e+00um, number of vias: 0
+M7(H) length: 0.000e+00um, number of vias: 0
+M8(V) length: 0.000e+00um, number of vias: 0
+M9(H) length: 0.000e+00um
+
+Peak Memory Usage was 224.8M 
+*** Finished trialRoute (cpu=0:00:00.0 mem=218.9M) ***
+
+CongRepair Bin Grid Size (width, height) = ( default_value , default_value )
+Trial Route Overflow 0.000000(H) 0.000000(V).
+Skipped repairing congestion.
+*** Finishing placeDesign default flow ***
+**placeDesign ... cpu = 0: 0: 0, real = 0: 0: 0, mem = 218.9M **
+<CMD> routeDesign
+**Info: (ENCSP-307): Design contains fractional 17 cells.
+Begin checking placement ... (start mem=218.9M, init mem=218.9M)
+*info: Placed = 6
+*info: Unplaced = 0
+Placement Density:70.51%(19/27)
+Finished checkPlace (cpu: total=0:00:00.0, vio checks=0:00:00.0; mem=218.9M)
+
+changeUseClockNetStatus Option :  -noFixedNetWires 
+*** Changed status on (0) nets in Clock.
+*** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=218.9M) ***
+
+globalDetailRoute
+
+#Start globalDetailRoute on Mon Jul  6 00:28:33 2026
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 218.00 (Mb)
+#Generating timing graph information, please wait...
+#10 total nets, 0 already routed, 0 will ignore in trialRoute
+**WARN: (ENCTR-3823):	The standard cell row height appears to be too small.
+#Dump tif for version 2.1
+**WARN: (ENCEXT-3530):	Use of command 'setDesignMode -process <process_node>' prior to extraction is recommended for maximum accuracy and optimal automatic threshold setting.
+**WARN: (ENCEXT-6197):	Capacitance table file not specified. This will result in lower parasitic accuracy using preRoute extraction or postRoute extraction with effort level 'low'. It is recommended to generate the capacitance table file using 'generateCapTbl' command and specify it before extraction.
+**ERROR: (ENCDC-634):	Timing library is not loaded yet.....
+
+AAE_INFO: All RC in memory mode is on.
+*** Memory pool thread-safe mode activated.
+AAE_THRD: End delay calculation. (MEM=271.609 CPU=0:00:00.0 REAL=0:00:00.0)
+#Write timing file took: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 270.00 (Mb)
+#Done generating timing graph information.
+#WARNING (NRDB-976) The TRACK STEP 0.1900 for preferred direction tracks is smaller than the PITCH 0.2000 for LAYER Metal3. This will cause routability problems for NanoRoute.
+#WARNING (NRDB-976) The TRACK STEP 0.1900 for preferred direction tracks is smaller than the PITCH 0.2000 for LAYER Metal5. This will cause routability problems for NanoRoute.
+#Start reading timing information from file .timing_file_4600.tif.gz ...
+#WARNING (NRDB-194) 
+#No setup time constraints read in
+#Read in timing information for 5 ports, 6 instances from timing file .timing_file_4600.tif.gz.
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 318.00 (Mb)
+#NanoRoute Version v13.10-p002 NR130329-0035/13_10-UB
+#Start routing data preparation.
+#WARNING (NREX-28) The height of the first routing layer Metal1 is 0.000000. It should be larger than 0.000000.
+#WARNING (NREX-30) Please also check the height and metal thickness values for the routing layers higher than routing layer Metal1.
+#WARNING (NRDB-812) Cuts within VIA VIA12_4C violate adjacent cut spacing rule.
+#WARNING (NRDB-812) Cuts within VIA VIA23_4C violate adjacent cut spacing rule.
+#WARNING (NRDB-812) Cuts within VIA VIA34_4C violate adjacent cut spacing rule.
+#WARNING (NRDB-812) Cuts within VIA VIA45_4C violate adjacent cut spacing rule.
+# Metal1       H   Track-Pitch = 0.190    Line-2-Via Pitch = 0.125
+# Metal2       V   Track-Pitch = 0.200    Line-2-Via Pitch = 0.140
+# Metal3       H   Track-Pitch = 0.190    Line-2-Via Pitch = 0.140
+# Metal4       V   Track-Pitch = 0.200    Line-2-Via Pitch = 0.140
+# Metal5       H   Track-Pitch = 0.190    Line-2-Via Pitch = 0.140
+# Metal6       V   Track-Pitch = 0.200    Line-2-Via Pitch = 0.170
+# Metal7       H   Track-Pitch = 0.285    Line-2-Via Pitch = 0.445
+#WARNING (NRAG-44) Track pitch is too small compared with line-2-via pitch.
+# Metal8       V   Track-Pitch = 0.200    Line-2-Via Pitch = 0.385
+#WARNING (NRAG-44) Track pitch is too small compared with line-2-via pitch.
+# Metal9       H   Track-Pitch = 0.380    Line-2-Via Pitch = 0.385
+#WARNING (NRAG-44) Track pitch is too small compared with line-2-via pitch.
+#Regenerating Ggrids automatically.
+#Auto generating G-grids with size=15 tracks, using layer Metal2's pitch = 0.200.
+#Using automatically generated G-grids.
+#Done routing data preparation.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 324.00 (Mb)
+#Merging special wires...
+#Using S.M.A.R.T. routing technology.
+#Number of eco nets is 0
+#
+#Start data preparation...
+#
+#Data preparation is done on Mon Jul  6 00:28:34 2026
+#
+#Analyzing routing resource...
+#Routing resource analysis is done on Mon Jul  6 00:28:34 2026
+#
+#  Resource Analysis:
+#
+#               Routing  #Avail      #Track     #Total     %Gcell
+#  Layer      Direction   Track     Blocked      Gcell    Blocked
+#  --------------------------------------------------------------
+#  Metal 1        H         238           0         225     0.00%
+#  Metal 2        V         226           0         225     0.00%
+#  Metal 3        H         238           0         225     0.00%
+#  Metal 4        V         226           0         225     0.00%
+#  Metal 5        H         238           0         225     0.00%
+#  Metal 6        V         226           0         225     0.00%
+#  Metal 7        H         105           0         225     0.00%
+#  Metal 8        V         105           0         225     0.00%
+#  Metal 9        H         118           0         225     0.00%
+#  --------------------------------------------------------------
+#  Total                   1720       0.00%  2025     0.00%
+#
+#
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 324.00 (Mb)
+#
+#start global routing iteration 1...
+#
+#setting timing driven routing constraints ...
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 324.00 (Mb)
+#
+#start global routing iteration 2...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 324.00 (Mb)
+#
+#start global routing iteration 3...
+#There are 10 nets routed.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 324.00 (Mb)
+#
+#start global routing iteration 4...
+#There are 10 nets routed.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 324.00 (Mb)
+#
+#
+#  Congestion Analysis: (blocked Gcells are excluded)
+#
+#                 OverCon          
+#                  #Gcell    %Gcell
+#     Layer           (1)   OverCon
+#  --------------------------------
+#   Metal 1      0(0.00%)   (0.00%)
+#   Metal 2      0(0.00%)   (0.00%)
+#   Metal 3      0(0.00%)   (0.00%)
+#   Metal 4      0(0.00%)   (0.00%)
+#   Metal 5      0(0.00%)   (0.00%)
+#   Metal 6      0(0.00%)   (0.00%)
+#   Metal 7      0(0.00%)   (0.00%)
+#   Metal 8      0(0.00%)   (0.00%)
+#   Metal 9      0(0.00%)   (0.00%)
+#  --------------------------------
+#     Total      0(0.00%)   (0.00%)
+#
+#  The worst congested Gcell overcon (routing demand over resource in number of tracks) = 1
+#
+#Complete Global Routing.
+#Total wire length = 111 um.
+#Total half perimeter of net bounding box = 133 um.
+#Total wire length on LAYER Metal1 = 0 um.
+#Total wire length on LAYER Metal2 = 48 um.
+#Total wire length on LAYER Metal3 = 63 um.
+#Total wire length on LAYER Metal4 = 0 um.
+#Total wire length on LAYER Metal5 = 0 um.
+#Total wire length on LAYER Metal6 = 0 um.
+#Total wire length on LAYER Metal7 = 0 um.
+#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length on LAYER Metal9 = 0 um.
+#Total number of vias = 26
+#Up-Via Summary (total 26):
+#           
+#-----------------------
+#  Metal 1           18
+#  Metal 2            8
+#-----------------------
+#                    26 
+#
+#Max overcon = 0 track.
+#Total overcon = 0.00%.
+#Worst layer Gcell overcon rate = 0.00%.
+#There are 10 nets routed.
+#start post global routing...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 324.00 (Mb)
+#
+#Start data preparation for track assignment...
+#
+#Data preparation is done on Mon Jul  6 00:28:34 2026
+#
+#Start Track Assignment.
+#Complete Track Assignment.
+#Total wire length = 111 um.
+#Total half perimeter of net bounding box = 133 um.
+#Total wire length on LAYER Metal1 = 0 um.
+#Total wire length on LAYER Metal2 = 49 um.
+#Total wire length on LAYER Metal3 = 62 um.
+#Total wire length on LAYER Metal4 = 0 um.
+#Total wire length on LAYER Metal5 = 0 um.
+#Total wire length on LAYER Metal6 = 0 um.
+#Total wire length on LAYER Metal7 = 0 um.
+#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length on LAYER Metal9 = 0 um.
+#Total number of vias = 26
+#Up-Via Summary (total 26):
+#           
+#-----------------------
+#  Metal 1           18
+#  Metal 2            8
+#-----------------------
+#                    26 
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 324.00 (Mb)
+#
+#Cpu time = 00:00:00
+#Elapsed time = 00:00:00
+#Increased memory = 6.00 (Mb)
+#Total memory = 324.00 (Mb)
+#Peak memory = 357.00 (Mb)
+#Using S.M.A.R.T. routing technology.
+#routeSiEffort set to high
+#
+#Start Detail Routing..
+#start initial detail routing ...
+#    number of violations = 0
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 342.00 (Mb)
+#start 1st optimization iteration ...
+#    number of violations = 0
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 342.00 (Mb)
+#Complete Detail Routing.
+#Total wire length = 123 um.
+#Total half perimeter of net bounding box = 133 um.
+#Total wire length on LAYER Metal1 = 1 um.
+#Total wire length on LAYER Metal2 = 53 um.
+#Total wire length on LAYER Metal3 = 70 um.
+#Total wire length on LAYER Metal4 = 0 um.
+#Total wire length on LAYER Metal5 = 0 um.
+#Total wire length on LAYER Metal6 = 0 um.
+#Total wire length on LAYER Metal7 = 0 um.
+#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length on LAYER Metal9 = 0 um.
+#Total number of vias = 32
+#Up-Via Summary (total 32):
+#           
+#-----------------------
+#  Metal 1           20
+#  Metal 2           12
+#-----------------------
+#                    32 
+#
+#Total number of DRC violations = 0
+#Cpu time = 00:00:00
+#Elapsed time = 00:00:00
+#Increased memory = 6.00 (Mb)
+#Total memory = 330.00 (Mb)
+#Peak memory = 361.00 (Mb)
+#
+#start routing for process antenna violation fix ...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 350.00 (Mb)
+#
+#Total wire length = 123 um.
+#Total half perimeter of net bounding box = 133 um.
+#Total wire length on LAYER Metal1 = 1 um.
+#Total wire length on LAYER Metal2 = 53 um.
+#Total wire length on LAYER Metal3 = 70 um.
+#Total wire length on LAYER Metal4 = 0 um.
+#Total wire length on LAYER Metal5 = 0 um.
+#Total wire length on LAYER Metal6 = 0 um.
+#Total wire length on LAYER Metal7 = 0 um.
+#Total wire length on LAYER Metal8 = 0 um.
+#Total wire length on LAYER Metal9 = 0 um.
+#Total number of vias = 32
+#Up-Via Summary (total 32):
+#           
+#-----------------------
+#  Metal 1           20
+#  Metal 2           12
+#-----------------------
+#                    32 
+#
+#Total number of DRC violations = 0
+#Total number of net violated process antenna rule = 0
+#
+#detailRoute Statistics:
+#Cpu time = 00:00:01
+#Elapsed time = 00:00:01
+#Increased memory = 17.00 (Mb)
+#Total memory = 341.00 (Mb)
+#Peak memory = 361.00 (Mb)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 341.00 (Mb)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 340.00 (Mb)
+#
+#globalDetailRoute statistics:
+#Cpu time = 00:00:02
+#Elapsed time = 00:00:02
+#Increased memory = 122.00 (Mb)
+#Total memory = 340.00 (Mb)
+#Peak memory = 361.00 (Mb)
+#Number of warnings = 12
+#Total number of warnings = 12
+#Number of fails = 0
+#Total number of fails = 0
+#Complete globalDetailRoute on Mon Jul  6 00:28:35 2026
+#
+<CMD> verifyGeometry
+ *** Starting Verify Geometry (MEM: 340.7) ***
+
+  VERIFY GEOMETRY ...... Starting Verification
+  VERIFY GEOMETRY ...... Initializing
+  VERIFY GEOMETRY ...... Deleting Existing Violations
+  VERIFY GEOMETRY ...... Creating Sub-Areas
+                  ...... bin size: 1920
+VG: elapsed time: 0.00
+Begin Summary ...
+  Cells       : 0
+  SameNet     : 0
+  Wiring      : 0
+  Antenna     : 0
+  Short       : 0
+  Overlap     : 0
+End Summary
+
+  Verification Complete : 0 Viols.  0 Wrngs.
+
+**********End: VERIFY GEOMETRY**********
+ *** verify geometry (CPU: 0:00:00.3  MEM: 0.0M)
+
+<CMD> verifyConnectivity
+VERIFY_CONNECTIVITY use new engine.
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Mon Jul  6 00:28:35 2026
+
+Design Name: lut
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (45.2400, 45.2700)
+Error Limit = 1000; Warning Limit = 50
+Check all nets
+
+Begin Summary 
+  Found no problems or warnings.
+End Summary
+
+End Time: Mon Jul  6 00:28:35 2026
+Time Elapsed: 0:00:00.0
+
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 0 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 0.000M)
+
+**ERROR: (ENCSYT-6692):	[/home/buet/vlsimp/suganth/lut/rev1/encounter.tcl]: Invalid return code while executing "/home/buet/vlsimp/suganth/lut/rev1/encounter.tcl"
+**ERROR: (ENCSYT-6693):	[/home/buet/vlsimp/suganth/lut/rev1/encounter.tcl]: invalid command name "report_area"
+<CMD> win
+<CMD> selectInst g63
+<CMD> deselectAll
+<CMD> selectInst g63
+<CMD> panCenter 21.884 23.778
+<CMD> panCenter 21.062 23.884
+<CMD> windowSelect 20.795 24.240 20.192 24.054
+<CMD> panCenter 25.771 21.939
+<CMD> panCenter 34.586 21.963
+<CMD> panCenter 39.248 20.780
+<CMD> panCenter 35.861 19.087
+<CMD> panCenter 29.088 17.325
+<CMD> panCenter 23.753 19.018
+<CMD> uiSetTool move
+<CMD> panCenter 8.888 18.134
+<CMD> panCenter -3.644 20.311
+<CMD> panCenter 11.600 21.689
+<CMD> panCenter 28.755 23.155
+**ERROR: (ENCOAX-820):	The OA features are disabled in the current session of Encounter because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Encounter either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+
+**ERROR: (ENCOAX-850):	getG2Libs command cannot be run as OA features are disabled in this session.
+**ERROR: (ENCQTF-4044):	Error happens when execute '::Rda_Design::saveDesign:getOALibList saveDesign library' with error message: ''.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
+<CMD> panCenter 30.355 10.626
+<CMD> panCenter 29.820 23.475
+<CMD> panCenter 11.082 38.465
+<CMD> panCenter 23.520 22.569
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference mGrid -isVisible 1
+<CMD> setLayerPreference pGrid -isVisible 1
+<CMD> setLayerPreference userGrid -isVisible 1
+<CMD> setLayerPreference gcell -isVisible 1
+<CMD> setLayerPreference mGrid -isVisible 0
+<CMD> setLayerPreference pGrid -isVisible 0
+<CMD> setLayerPreference userGrid -isVisible 0
+<CMD> setLayerPreference gcell -isVisible 0
+<CMD> setLayerPreference trackObj -isVisible 1
+<CMD> setLayerPreference nonPrefTrackObj -isVisible 1
+<CMD> setLayerPreference trackObj -isVisible 0
+<CMD> setLayerPreference nonPrefTrackObj -isVisible 0
+<CMD> panCenter 25.233 23.259
+<CMD> setLayerPreference blackBox -isVisible 0
+<CMD> setLayerPreference blackBox -isSelectable 0
+<CMD> setLayerPreference areaIo -isVisible 0
+<CMD> setLayerPreference areaIo -isVisible 1
+<CMD> setLayerPreference mGrid -isVisible 1
+<CMD> setLayerPreference pGrid -isVisible 1
+<CMD> setLayerPreference userGrid -isVisible 1
+<CMD> setLayerPreference gcell -isVisible 1
+<CMD> setLayerPreference mGrid -isVisible 0
+<CMD> setLayerPreference pGrid -isVisible 0
+<CMD> setLayerPreference userGrid -isVisible 0
+<CMD> setLayerPreference gcell -isVisible 0
+<CMD> setLayerPreference mGrid -isVisible 1
+<CMD> setLayerPreference pGrid -isVisible 1
+<CMD> setLayerPreference userGrid -isVisible 1
+<CMD> setLayerPreference gcell -isVisible 1
+<CMD> setLayerPreference mGrid -isVisible 0
+<CMD> setLayerPreference pGrid -isVisible 0
+<CMD> setLayerPreference userGrid -isVisible 0
+<CMD> setLayerPreference gcell -isVisible 0
+<CMD> setLayerPreference blackBox -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> selectInst g62
+<CMD> setObjFPlanBox Instance g62 23.2175 23.563 24.4175 25.273
+<CMD> setObjFPlanBox Instance g62 20.018 23.573 21.218 25.283
+<CMD> setObjFPlanBox Instance g62 23.0405 23.56 24.2405 25.27
+
+*** Memory Usage v#7 (Current mem = 349.906M, initial mem = 56.227M) ***
+--- Ending "Encounter" (totcpu=0:01:22, real=0:06:24, mem=349.9M) ---

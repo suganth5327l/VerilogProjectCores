@@ -1,0 +1,96 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream In
+Program   : @(#)$CDS: strmin version 6.1.5 12/12/2012 15:27 (sjfnl003) $
+          : sub-version  IC6.1.5.500.15 
+Started at: 06-Jul-2026  00:51:11
+User Name : buet
+Host Name : cadence
+Directory : /home/buet/vlsimp/suganth/lut/rev1
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-75): Target library 'lut_lib' is attached to the technology library 'gpdk090'. Therefore, the technology file is opened in read-only mode. All the undefined layer-purpose pairs will be dropped.
+WARNING (XSTRM-107): Existing cells in the target library may be overwritten if the cell name in the Stream file is same as the cell name in the target library. Specify the Do Not Overwrite Existing Cells option and try again.
+INFO (XSTRM-217): Reading the layer map file, /home/buet/cadence/gpdk090_v4.6/libs.oa22/gpdk090/gpdk090.layermap
+WARNING (XSTRM-31): Layer map file '/home/buet/cadence/gpdk090_v4.6/libs.oa22/gpdk090/gpdk090.layermap' contains duplicate entries for Stream layer:datatype '7:1' at line number '61'. This record will be ignored. Remove the duplicate entry from the layer map file and then translate again.
+WARNING (XSTRM-31): Layer map file '/home/buet/cadence/gpdk090_v4.6/libs.oa22/gpdk090/gpdk090.layermap' contains duplicate entries for Stream layer:datatype '9:1' at line number '62'. This record will be ignored. Remove the duplicate entry from the layer map file and then translate again.
+WARNING (XSTRM-31): Layer map file '/home/buet/cadence/gpdk090_v4.6/libs.oa22/gpdk090/gpdk090.layermap' contains duplicate entries for Stream layer:datatype '11:1' at line number '63'. This record will be ignored. Remove the duplicate entry from the layer map file and then translate again.
+WARNING (XSTRM-31): Layer map file '/home/buet/cadence/gpdk090_v4.6/libs.oa22/gpdk090/gpdk090.layermap' contains duplicate entries for Stream layer:datatype '31:1' at line number '64'. This record will be ignored. Remove the duplicate entry from the layer map file and then translate again.
+WARNING (XSTRM-31): Layer map file '/home/buet/cadence/gpdk090_v4.6/libs.oa22/gpdk090/gpdk090.layermap' contains duplicate entries for Stream layer:datatype '33:1' at line number '65'. This record will be ignored. Remove the duplicate entry from the layer map file and then translate again.
+WARNING (XSTRM-31): Layer map file '/home/buet/cadence/gpdk090_v4.6/libs.oa22/gpdk090/gpdk090.layermap' contains duplicate entries for Stream layer:datatype '35:1' at line number '66'. This record will be ignored. Remove the duplicate entry from the layer map file and then translate again.
+WARNING (XSTRM-31): Layer map file '/home/buet/cadence/gpdk090_v4.6/libs.oa22/gpdk090/gpdk090.layermap' contains duplicate entries for Stream layer:datatype '38:1' at line number '67'. This record will be ignored. Remove the duplicate entry from the layer map file and then translate again.
+WARNING (XSTRM-31): Layer map file '/home/buet/cadence/gpdk090_v4.6/libs.oa22/gpdk090/gpdk090.layermap' contains duplicate entries for Stream layer:datatype '40:1' at line number '68'. This record will be ignored. Remove the duplicate entry from the layer map file and then translate again.
+WARNING (XSTRM-31): Layer map file '/home/buet/cadence/gpdk090_v4.6/libs.oa22/gpdk090/gpdk090.layermap' contains duplicate entries for Stream layer:datatype '42:1' at line number '69'. This record will be ignored. Remove the duplicate entry from the layer map file and then translate again.
+INFO (XSTRM-163): You have not used the viaMap option. If a viaMap file, corresponding techfile or technology library exist, then use the -viaMap option for creating oaVia instances in the Streamed-In library. Using the -viaMap option improves performance and VM usage of applications using the Streamed-In design. For details on the viaMap option, refer to the "Design Data Translator's Reference" guide for XStream.
+
+Summary of Options:
+	library				lut_lib
+	strmFile			/home/buet/vlsimp/suganth/lut/rev1/layouts/lut.gds
+	logFile				strmIn.log
+	topCell				lut
+	view				layout
+	case				Preserve
+	layerMap			/home/buet/cadence/gpdk090_v4.6/libs.oa22/gpdk090/gpdk090.layermap
+	propSeparator			,
+
+WARNING (XSTRM-267): The referenced cell "AND2X1" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "OR2X1" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "XOR2X4" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "MX4XL" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "CLKINVX4" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+INFO (XSTRM-220): 1. Translating STRUCTURE VIA12_1C as cellView lut_lib/VIA12_1C/layout
+WARNING (XSTRM-36): The objects in the stream layer-datatype '26:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+INFO (XSTRM-220): 2. Translating STRUCTURE VIA23_1ST_N as cellView lut_lib/VIA23_1ST_N/layout
+WARNING (XSTRM-36): The objects in the stream layer-datatype '56:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '47:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+INFO (XSTRM-220): 3. Translating STRUCTURE VIA23_1C as cellView lut_lib/VIA23_1C/layout
+WARNING (XSTRM-36): The objects in the stream layer-datatype '56:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '47:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+INFO (XSTRM-220): 4. Translating STRUCTURE VIA12_1C_V as cellView lut_lib/VIA12_1C_V/layout
+WARNING (XSTRM-36): The objects in the stream layer-datatype '26:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+INFO (XSTRM-220): 5. Translating STRUCTURE lut as cellView lut_lib/lut/layout
+WARNING (XSTRM-36): The objects in the stream layer-datatype '192:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '190:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '191:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '190:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '191:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '190:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '191:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '190:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '191:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '190:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '191:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '190:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '191:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '29:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '50:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '50:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '29:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '50:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '29:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '50:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '29:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '50:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '29:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '50:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '29:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '29:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '50:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '29:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+WARNING (XSTRM-36): The objects in the stream layer-datatype '29:0' are ignored. This is because the stream layer-datatype pair is not specified in the layer map file. Specify the stream layer-datatype pair in the layer map file and try again.
+
+Summary of Objects Translated:
+	Instances:                              38
+	Arrays:                                 0
+	Polygons:                               0
+	Paths:                                  1
+	PathSegs:                               0
+	Rectangles:                             11
+	Text:                                   15
+	Node:                                   0
+	Line:                                   0
+	Cells:                                  5
+
+Elapsed Time: 0.7s   User Time: 0.8s   CPU Time: 0.1s   Peak VM: 387KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '51' warning(s) found.

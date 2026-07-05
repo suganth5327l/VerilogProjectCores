@@ -1,0 +1,62 @@
+irun: 10.20-s100: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+TOOL:	irun	10.20-s100: Started on Jul 06, 2026 at 00:17:39 BDT
+irun
+	tb_lut.v
+	lut.v
+	andlut.v
+	orlut.v
+	notlut.v
+	xorlut.v
+Recompiling... reason: file './tb_lut.v' is newer than expected.
+	expected: Mon Jul  6 00:16:11 2026
+	actual:   Mon Jul  6 00:17:21 2026
+file: tb_lut.v
+	module worklib.tb_lut:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_lut
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.tb_lut:v <0x2e91daa0>
+			streams:   7, words:  5995
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             6       6
+		Registers:           6       6
+		Scalar wires:        9       -
+		Always blocks:       5       5
+		Initial blocks:      2       2
+		Pseudo assignments:  4       4
+	Writing initial simulation snapshot: worklib.tb_lut:v
+Loading snapshot worklib.tb_lut:v .................... Done
+ncsim> source /home/buet/cadence/installs/INCISIV102/tools/inca/files/ncsimrc
+ncsim> run
+ncsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./tb_lut.v, line = 7, pos = 8
+           Scope: tb_lut
+            Time: 0 FS + 0
+
+OPCODES: 00|INPUTS: 00|OUTPUTS: 0
+OPCODES: 00|INPUTS: 01|OUTPUTS: 0
+OPCODES: 00|INPUTS: 10|OUTPUTS: 0
+OPCODES: 00|INPUTS: 11|OUTPUTS: 1
+OPCODES: 01|INPUTS: 00|OUTPUTS: 0
+OPCODES: 01|INPUTS: 01|OUTPUTS: 1
+OPCODES: 01|INPUTS: 10|OUTPUTS: 1
+OPCODES: 01|INPUTS: 11|OUTPUTS: 1
+OPCODES: 10|INPUTS: 00|OUTPUTS: 1
+OPCODES: 10|INPUTS: 01|OUTPUTS: 0
+OPCODES: 10|INPUTS: 10|OUTPUTS: 1
+OPCODES: 10|INPUTS: 11|OUTPUTS: 0
+OPCODES: 11|INPUTS: 00|OUTPUTS: 0
+OPCODES: 11|INPUTS: 01|OUTPUTS: 1
+OPCODES: 11|INPUTS: 10|OUTPUTS: 1
+OPCODES: 11|INPUTS: 11|OUTPUTS: 0
+Simulation complete via $finish(1) at time 160 NS + 0
+./tb_lut.v:28 #10 $finish;
+ncsim> exit
+TOOL:	irun	10.20-s100: Exiting on Jul 06, 2026 at 00:17:41 BDT  (total: 00:00:02)

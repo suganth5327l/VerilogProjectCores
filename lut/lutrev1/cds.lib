@@ -1,0 +1,4 @@
+SOFTINCLUDE /home/buet/cadence/IC615/share/cdssetup/cds.lib
+DEFINE maza /home/buet/vlsimp/suganth/lut/rev1/maza
+DEFINE lut_lib /home/buet/vlsimp/suganth/lut/rev1/lut_lib
+DEFINE avTech /home/buet/cadence/ASSURA41/tools/assura/etc/avtech/avTech
