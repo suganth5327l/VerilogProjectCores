@@ -1,3 +1,5 @@
+//ver 1 2/8/26
+
 module me (input cs,we,input [2:0] i,input [2:0] adr,output reg  [2:0] a);
 reg [2:0] i1,i2,i3,i4,i5,i6,i7,i8;
 always @ (*) begin
