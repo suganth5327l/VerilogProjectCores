@@ -1,0 +1,1240 @@
+Qflow synthesis logfile created on Monday 10 August 2026 11:33:59 AM IST
+Running yosys for verilog parsing and synthesis
+yosys  -s dsp.ys
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.33 (git sha1 2584903a060)
+
+
+-- Executing script file `dsp.ys' --
+
+1. Executing Liberty frontend: /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib
+Imported 39 cell types from liberty file.
+
+2. Executing Verilog-2005 frontend: /home/suganth/verilog/dsp/ver1/source/dsp.v
+Parsing Verilog input from `/home/suganth/verilog/dsp/ver1/source/dsp.v' to AST representation.
+Generating RTLIL representation for module `\dsp'.
+Warning: Replacing memory \s3_i with list of registers. See /home/suganth/verilog/dsp/ver1/source/dsp.v:387, /home/suganth/verilog/dsp/ver1/source/dsp.v:281
+Warning: Replacing memory \s3_r with list of registers. See /home/suganth/verilog/dsp/ver1/source/dsp.v:386, /home/suganth/verilog/dsp/ver1/source/dsp.v:280
+Warning: Replacing memory \s2_i with list of registers. See /home/suganth/verilog/dsp/ver1/source/dsp.v:281, /home/suganth/verilog/dsp/ver1/source/dsp.v:193
+Warning: Replacing memory \s2_r with list of registers. See /home/suganth/verilog/dsp/ver1/source/dsp.v:280, /home/suganth/verilog/dsp/ver1/source/dsp.v:192
+Warning: Replacing memory \s1_i with list of registers. See /home/suganth/verilog/dsp/ver1/source/dsp.v:193, /home/suganth/verilog/dsp/ver1/source/dsp.v:133
+Warning: Replacing memory \s1_r with list of registers. See /home/suganth/verilog/dsp/ver1/source/dsp.v:192, /home/suganth/verilog/dsp/ver1/source/dsp.v:132
+Successfully finished Verilog frontend.
+
+3. Executing SYNTH pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1.1. Analyzing design hierarchy..
+Top module:  \dsp
+
+3.1.2. Analyzing design hierarchy..
+Top module:  \dsp
+Removed 0 unused modules.
+
+3.2. Executing PROC pass (convert processes to netlists).
+
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 6 switch rules as full_case in process $proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1 in module dsp.
+Removed a total of 0 dead cases.
+
+3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 70 assignments to connections.
+
+3.2.4. Executing PROC_INIT pass (extract init attributes).
+
+3.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~6 debug messages>
+
+3.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+     1/30: $1\y7_i[15:0]
+     2/30: $1\y7_r[15:0]
+     3/30: $1\y6_i[15:0]
+     4/30: $1\y6_r[15:0]
+     5/30: $1\y5_i[15:0]
+     6/30: $1\y5_r[15:0]
+     7/30: $1\y4_i[15:0]
+     8/30: $1\y4_r[15:0]
+     9/30: $1\y3_i[15:0]
+    10/30: $1\y3_r[15:0]
+    11/30: $1\y2_i[15:0]
+    12/30: $1\y2_r[15:0]
+    13/30: $1\y1_i[15:0]
+    14/30: $1\y1_r[15:0]
+    15/30: $1\y0_i[15:0]
+    16/30: $1\y0_r[15:0]
+    17/30: $1\mi2[31:0]
+    18/30: $1\mr2[31:0]
+    19/30: $1\ti[31:0]
+    20/30: $1\tr[31:0]
+    21/30: $1\mi1[31:0]
+    22/30: $1\mr1[31:0]
+    23/30: $1\s2_i[7][15:0]
+    24/30: $1\s2_r[7][15:0]
+    25/30: $1\s2_i[5][15:0]
+    26/30: $1\s2_r[5][15:0]
+    27/30: $1\s2_i[3][15:0]
+    28/30: $1\s2_r[3][15:0]
+    29/30: $1\s2_i[1][15:0]
+    30/30: $1\s2_r[1][15:0]
+
+3.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\dsp.\y0_r' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\y0_i' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\y1_r' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\y1_i' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\y2_r' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\y2_i' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\y3_r' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\y3_i' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\y4_r' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\y4_i' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\y5_r' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\y5_i' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\y6_r' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\y6_i' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\y7_r' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\y7_i' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\tr' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\ti' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\mr1' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\mi1' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\mr2' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\mi2' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s1_r[0]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s1_r[1]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s1_r[2]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s1_r[3]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s1_r[4]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s1_r[5]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s1_r[6]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s1_r[7]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s1_i[0]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s1_i[1]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s1_i[2]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s1_i[3]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s1_i[4]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s1_i[5]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s1_i[6]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s1_i[7]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s2_r[0]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s2_r[1]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s2_r[2]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s2_r[3]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s2_r[4]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s2_r[5]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s2_r[6]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s2_r[7]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s2_i[0]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s2_i[1]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s2_i[2]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s2_i[3]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s2_i[4]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s2_i[5]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s2_i[6]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s2_i[7]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s3_r[0]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s3_r[1]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s3_r[2]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s3_r[3]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s3_r[4]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s3_r[5]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s3_r[6]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s3_r[7]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s3_i[0]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s3_i[1]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s3_i[2]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s3_i[3]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s3_i[4]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s3_i[5]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s3_i[6]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+No latch inferred for signal `\dsp.\s3_i[7]' from process `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+
+3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 6 empty switches in `\dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+Removing empty process `dsp.$proc$/home/suganth/verilog/dsp/ver1/source/dsp.v:124$1'.
+Cleaned up 6 empty switches.
+
+3.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+<suppressed ~56 debug messages>
+
+3.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+
+3.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+Removed 6 unused cells and 230 unused wires.
+<suppressed ~13 debug messages>
+
+3.5. Executing CHECK pass (checking for obvious problems).
+Checking module dsp...
+Found and reported 0 problems.
+
+3.6. Executing OPT pass (performing simple optimizations).
+
+3.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+
+3.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+<suppressed ~69 debug messages>
+Removed a total of 23 cells.
+
+3.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dsp..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~30 debug messages>
+
+3.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dsp.
+Performed a total of 0 changes.
+
+3.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+Removed a total of 0 cells.
+
+3.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+Removed 0 unused cells and 23 unused wires.
+<suppressed ~1 debug messages>
+
+3.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+
+3.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dsp..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~30 debug messages>
+
+3.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dsp.
+Performed a total of 0 changes.
+
+3.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+Removed a total of 0 cells.
+
+3.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+
+3.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+
+3.6.16. Finished OPT passes. (There is nothing left to do.)
+
+3.7. Executing FSM pass (extract and optimize FSM).
+
+3.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+3.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+3.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+3.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+
+3.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+3.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+3.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+3.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+3.8. Executing OPT pass (performing simple optimizations).
+
+3.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+
+3.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+Removed a total of 0 cells.
+
+3.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dsp..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~30 debug messages>
+
+3.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dsp.
+Performed a total of 0 changes.
+
+3.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+Removed a total of 0 cells.
+
+3.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+
+3.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+
+3.8.9. Finished OPT passes. (There is nothing left to do.)
+
+3.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 23 bits (of 32) from port B of cell dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$49 ($mul).
+Removed top 7 bits (of 32) from port Y of cell dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$49 ($mul).
+Removed top 23 bits (of 32) from port B of cell dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$50 ($mul).
+Removed top 7 bits (of 32) from port Y of cell dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$50 ($mul).
+Removed top 7 bits (of 32) from port A of cell dsp.$add$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$51 ($add).
+Removed top 7 bits (of 32) from port B of cell dsp.$add$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$51 ($add).
+Removed top 6 bits (of 32) from port Y of cell dsp.$add$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$51 ($add).
+Removed top 7 bits (of 32) from port A of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:295$54 ($sub).
+Removed top 7 bits (of 32) from port B of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:295$54 ($sub).
+Removed top 6 bits (of 32) from port Y of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:295$54 ($sub).
+Removed top 7 bits (of 32) from port A of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:300$57 ($sub).
+Removed top 7 bits (of 32) from port B of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:300$57 ($sub).
+Removed top 6 bits (of 32) from port Y of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:300$57 ($sub).
+Removed top 16 bits (of 32) from port A of cell dsp.$neg$/home/suganth/verilog/dsp/ver1/source/dsp.v:324$69 ($neg).
+Removed top 16 bits (of 32) from port A of cell dsp.$neg$/home/suganth/verilog/dsp/ver1/source/dsp.v:329$71 ($neg).
+Removed top 16 bits (of 32) from port A of cell dsp.$neg$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$78 ($neg).
+Removed top 23 bits (of 32) from port B of cell dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$79 ($mul).
+Removed top 23 bits (of 32) from port B of cell dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$80 ($mul).
+Removed top 7 bits (of 32) from port Y of cell dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$80 ($mul).
+Removed top 7 bits (of 32) from port B of cell dsp.$add$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$81 ($add).
+Removed top 7 bits (of 32) from port B of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:355$86 ($sub).
+Removed top 23 bits (of 32) from port B of cell dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:361$92 ($mul).
+Removed top 7 bits (of 32) from port Y of cell dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:361$92 ($mul).
+Removed top 7 bits (of 32) from port A of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:361$94 ($sub).
+Removed top 7 bits (of 32) from port B of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:361$94 ($sub).
+Removed top 6 bits (of 32) from port Y of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:361$94 ($sub).
+Removed top 1 bits (of 16) from mux cell dsp.$procmux$119 ($mux).
+Removed top 1 bits (of 16) from mux cell dsp.$procmux$122 ($mux).
+Removed top 1 bits (of 16) from mux cell dsp.$procmux$125 ($mux).
+Removed top 1 bits (of 16) from mux cell dsp.$procmux$128 ($mux).
+Removed top 1 bits (of 16) from mux cell dsp.$procmux$131 ($mux).
+Removed top 1 bits (of 16) from mux cell dsp.$procmux$134 ($mux).
+Removed top 1 bits (of 16) from mux cell dsp.$procmux$137 ($mux).
+Removed top 1 bits (of 16) from mux cell dsp.$procmux$140 ($mux).
+Removed top 1 bits (of 16) from mux cell dsp.$procmux$143 ($mux).
+Removed top 1 bits (of 16) from mux cell dsp.$procmux$146 ($mux).
+Removed top 1 bits (of 16) from mux cell dsp.$procmux$149 ($mux).
+Removed top 1 bits (of 16) from mux cell dsp.$procmux$152 ($mux).
+Removed top 1 bits (of 16) from mux cell dsp.$procmux$155 ($mux).
+Removed top 1 bits (of 16) from mux cell dsp.$procmux$158 ($mux).
+Removed top 1 bits (of 16) from mux cell dsp.$procmux$161 ($mux).
+Removed top 1 bits (of 16) from mux cell dsp.$procmux$164 ($mux).
+Removed top 8 bits (of 32) from mux cell dsp.$procmux$167 ($mux).
+Removed top 8 bits (of 32) from mux cell dsp.$procmux$170 ($mux).
+Removed top 16 bits (of 32) from mux cell dsp.$procmux$173 ($mux).
+Removed top 16 bits (of 32) from mux cell dsp.$procmux$176 ($mux).
+Removed top 8 bits (of 32) from mux cell dsp.$procmux$179 ($mux).
+Removed top 8 bits (of 32) from mux cell dsp.$procmux$182 ($mux).
+Removed top 2 bits (of 26) from port Y of cell dsp.$add$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$51 ($add).
+Removed top 1 bits (of 25) from port A of cell dsp.$add$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$51 ($add).
+Removed top 1 bits (of 25) from port B of cell dsp.$add$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$51 ($add).
+Removed top 2 bits (of 26) from port Y of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:295$54 ($sub).
+Removed top 1 bits (of 25) from port A of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:295$54 ($sub).
+Removed top 1 bits (of 25) from port B of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:295$54 ($sub).
+Removed top 2 bits (of 26) from port Y of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:300$57 ($sub).
+Removed top 1 bits (of 25) from port A of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:300$57 ($sub).
+Removed top 1 bits (of 25) from port B of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:300$57 ($sub).
+Removed top 16 bits (of 32) from port Y of cell dsp.$neg$/home/suganth/verilog/dsp/ver1/source/dsp.v:324$69 ($neg).
+Removed top 16 bits (of 32) from port Y of cell dsp.$neg$/home/suganth/verilog/dsp/ver1/source/dsp.v:329$71 ($neg).
+Removed top 8 bits (of 32) from port Y of cell dsp.$add$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$81 ($add).
+Removed top 8 bits (of 32) from port A of cell dsp.$add$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$81 ($add).
+Removed top 1 bits (of 25) from port B of cell dsp.$add$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$81 ($add).
+Removed top 8 bits (of 32) from port Y of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:355$86 ($sub).
+Removed top 8 bits (of 32) from port A of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:355$86 ($sub).
+Removed top 1 bits (of 25) from port B of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:355$86 ($sub).
+Removed top 2 bits (of 26) from port Y of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:361$94 ($sub).
+Removed top 1 bits (of 25) from port A of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:361$94 ($sub).
+Removed top 1 bits (of 25) from port B of cell dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:361$94 ($sub).
+Removed top 1 bits (of 25) from port Y of cell dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$49 ($mul).
+Removed top 1 bits (of 25) from port Y of cell dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$50 ($mul).
+Removed top 8 bits (of 32) from port Y of cell dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$79 ($mul).
+Removed top 1 bits (of 25) from port Y of cell dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$80 ($mul).
+Removed top 1 bits (of 25) from port Y of cell dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:361$92 ($mul).
+Removed top 16 bits (of 32) from wire dsp.$1\ti[31:0].
+Removed top 21 bits (of 32) from wire dsp.$1\tr[31:0].
+Removed top 8 bits (of 32) from wire dsp.$add$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$51_Y.
+Removed top 8 bits (of 32) from wire dsp.$add$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$81_Y.
+Removed top 8 bits (of 32) from wire dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$49_Y.
+Removed top 13 bits (of 32) from wire dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$50_Y.
+Removed top 29 bits (of 32) from wire dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$79_Y.
+Removed top 8 bits (of 32) from wire dsp.$mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:361$92_Y.
+Removed top 16 bits (of 32) from wire dsp.$neg$/home/suganth/verilog/dsp/ver1/source/dsp.v:324$69_Y.
+Removed top 16 bits (of 32) from wire dsp.$neg$/home/suganth/verilog/dsp/ver1/source/dsp.v:329$71_Y.
+Removed top 1 bits (of 32) from wire dsp.$neg$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$78_Y.
+Removed top 8 bits (of 32) from wire dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:295$54_Y.
+Removed top 31 bits (of 32) from wire dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:355$86_Y.
+Removed top 8 bits (of 32) from wire dsp.$sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:361$94_Y.
+Removed top 8 bits (of 32) from wire dsp.mi1.
+Removed top 8 bits (of 32) from wire dsp.mi2.
+Removed top 8 bits (of 32) from wire dsp.mr1.
+
+3.10. Executing PEEPOPT pass (run peephole optimizers).
+
+3.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+Removed 0 unused cells and 16 unused wires.
+<suppressed ~1 debug messages>
+
+3.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module dsp:
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:132$2 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:133$3 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:144$6 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:145$7 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:156$10 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:157$11 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:168$14 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:169$15 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:192$18 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:193$19 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:211$23 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:215$26 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:232$31 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:233$32 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:244$36 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:248$39 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:280$44 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:281$45 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$51 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:308$63 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:309$64 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:334$72 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:335$73 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$81 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:368$97 ($add).
+  creating $macc model for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:369$98 ($add).
+  creating $macc model for $mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$49 ($mul).
+  creating $macc model for $mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$50 ($mul).
+  creating $macc model for $mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$79 ($mul).
+  creating $macc model for $mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$80 ($mul).
+  creating $macc model for $mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:361$92 ($mul).
+  creating $macc model for $neg$/home/suganth/verilog/dsp/ver1/source/dsp.v:324$69 ($neg).
+  creating $macc model for $neg$/home/suganth/verilog/dsp/ver1/source/dsp.v:329$71 ($neg).
+  creating $macc model for $neg$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$78 ($neg).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:135$4 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:136$5 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:147$8 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:148$9 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:159$12 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:160$13 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:171$16 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:172$17 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:195$20 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:196$21 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:212$24 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:214$25 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:235$33 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:236$34 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:245$37 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:247$38 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:283$46 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:284$47 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:295$54 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:300$57 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:311$65 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:312$66 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:337$74 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:338$75 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:355$86 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:361$94 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:371$99 ($sub).
+  creating $macc model for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:372$100 ($sub).
+  merging $macc model for $mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:361$92 into $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:361$94.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:371$99.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:355$86.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:338$75.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:337$74.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:312$66.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:311$65.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:300$57.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:295$54.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:284$47.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:283$46.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:247$38.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:245$37.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:236$34.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:235$33.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:214$25.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:212$24.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:196$21.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:195$20.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:172$17.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:171$16.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:160$13.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:159$12.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:148$9.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:147$8.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:136$5.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:135$4.
+  creating $alu model for $macc $neg$/home/suganth/verilog/dsp/ver1/source/dsp.v:329$71.
+  creating $alu model for $macc $neg$/home/suganth/verilog/dsp/ver1/source/dsp.v:324$69.
+  creating $alu model for $macc $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:372$100.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:369$98.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:368$97.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$81.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:335$73.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:334$72.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:309$64.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:308$63.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$51.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:281$45.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:280$44.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:248$39.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:244$36.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:233$32.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:232$31.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:215$26.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:211$23.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:193$19.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:192$18.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:169$15.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:168$14.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:157$11.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:156$10.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:145$7.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:144$6.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:133$3.
+  creating $alu model for $macc $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:132$2.
+  creating $macc cell for $neg$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$78: $auto$alumacc.cc:365:replace_macc$225
+  creating $macc cell for $mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$80: $auto$alumacc.cc:365:replace_macc$226
+  creating $macc cell for $mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$79: $auto$alumacc.cc:365:replace_macc$227
+  creating $macc cell for $mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$50: $auto$alumacc.cc:365:replace_macc$228
+  creating $macc cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:361$94: $auto$alumacc.cc:365:replace_macc$229
+  creating $macc cell for $mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$49: $auto$alumacc.cc:365:replace_macc$230
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:211$23: $auto$alumacc.cc:485:replace_alu$231
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:244$36: $auto$alumacc.cc:485:replace_alu$234
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:280$44: $auto$alumacc.cc:485:replace_alu$237
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:281$45: $auto$alumacc.cc:485:replace_alu$240
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:335$73: $auto$alumacc.cc:485:replace_alu$243
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$81: $auto$alumacc.cc:485:replace_alu$246
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:369$98: $auto$alumacc.cc:485:replace_alu$249
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:372$100: $auto$alumacc.cc:485:replace_alu$252
+  creating $alu cell for $neg$/home/suganth/verilog/dsp/ver1/source/dsp.v:324$69: $auto$alumacc.cc:485:replace_alu$255
+  creating $alu cell for $neg$/home/suganth/verilog/dsp/ver1/source/dsp.v:329$71: $auto$alumacc.cc:485:replace_alu$258
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:132$2: $auto$alumacc.cc:485:replace_alu$261
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:135$4: $auto$alumacc.cc:485:replace_alu$264
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:133$3: $auto$alumacc.cc:485:replace_alu$267
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:136$5: $auto$alumacc.cc:485:replace_alu$270
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:144$6: $auto$alumacc.cc:485:replace_alu$273
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:147$8: $auto$alumacc.cc:485:replace_alu$276
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:145$7: $auto$alumacc.cc:485:replace_alu$279
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:148$9: $auto$alumacc.cc:485:replace_alu$282
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:156$10: $auto$alumacc.cc:485:replace_alu$285
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:159$12: $auto$alumacc.cc:485:replace_alu$288
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:157$11: $auto$alumacc.cc:485:replace_alu$291
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:160$13: $auto$alumacc.cc:485:replace_alu$294
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:168$14: $auto$alumacc.cc:485:replace_alu$297
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:171$16: $auto$alumacc.cc:485:replace_alu$300
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:169$15: $auto$alumacc.cc:485:replace_alu$303
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:172$17: $auto$alumacc.cc:485:replace_alu$306
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:192$18: $auto$alumacc.cc:485:replace_alu$309
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:195$20: $auto$alumacc.cc:485:replace_alu$312
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:193$19: $auto$alumacc.cc:485:replace_alu$315
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:196$21: $auto$alumacc.cc:485:replace_alu$318
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:215$26: $auto$alumacc.cc:485:replace_alu$321
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:212$24: $auto$alumacc.cc:485:replace_alu$324
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:214$25: $auto$alumacc.cc:485:replace_alu$327
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:232$31: $auto$alumacc.cc:485:replace_alu$330
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:235$33: $auto$alumacc.cc:485:replace_alu$333
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:233$32: $auto$alumacc.cc:485:replace_alu$336
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:236$34: $auto$alumacc.cc:485:replace_alu$339
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:248$39: $auto$alumacc.cc:485:replace_alu$342
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:245$37: $auto$alumacc.cc:485:replace_alu$345
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:247$38: $auto$alumacc.cc:485:replace_alu$348
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:283$46: $auto$alumacc.cc:485:replace_alu$351
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:284$47: $auto$alumacc.cc:485:replace_alu$354
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:294$51: $auto$alumacc.cc:485:replace_alu$357
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:295$54: $auto$alumacc.cc:485:replace_alu$360
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:300$57: $auto$alumacc.cc:485:replace_alu$363
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:308$63: $auto$alumacc.cc:485:replace_alu$366
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:311$65: $auto$alumacc.cc:485:replace_alu$369
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:309$64: $auto$alumacc.cc:485:replace_alu$372
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:312$66: $auto$alumacc.cc:485:replace_alu$375
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:334$72: $auto$alumacc.cc:485:replace_alu$378
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:337$74: $auto$alumacc.cc:485:replace_alu$381
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:338$75: $auto$alumacc.cc:485:replace_alu$384
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:355$86: $auto$alumacc.cc:485:replace_alu$387
+  creating $alu cell for $add$/home/suganth/verilog/dsp/ver1/source/dsp.v:368$97: $auto$alumacc.cc:485:replace_alu$390
+  creating $alu cell for $sub$/home/suganth/verilog/dsp/ver1/source/dsp.v:371$99: $auto$alumacc.cc:485:replace_alu$393
+  created 55 $alu and 6 $macc cells.
+
+3.13. Executing SHARE pass (SAT-based resource sharing).
+
+3.14. Executing OPT pass (performing simple optimizations).
+
+3.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+
+3.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+Removed a total of 0 cells.
+
+3.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dsp..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~30 debug messages>
+
+3.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dsp.
+Performed a total of 0 changes.
+
+3.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+Removed a total of 0 cells.
+
+3.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+3.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+
+3.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dsp..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~30 debug messages>
+
+3.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dsp.
+Performed a total of 0 changes.
+
+3.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+Removed a total of 0 cells.
+
+3.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+
+3.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+
+3.14.16. Finished OPT passes. (There is nothing left to do.)
+
+3.15. Executing MEMORY pass.
+
+3.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+3.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+3.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+3.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+3.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+3.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+
+3.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+3.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+3.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+
+3.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+3.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+
+3.17. Executing OPT pass (performing simple optimizations).
+
+3.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+
+3.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+Removed a total of 0 cells.
+
+3.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+
+3.17.5. Finished fast OPT passes.
+
+3.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+3.19. Executing OPT pass (performing simple optimizations).
+
+3.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+
+3.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+Removed a total of 0 cells.
+
+3.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dsp..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~30 debug messages>
+
+3.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dsp.
+Performed a total of 0 changes.
+
+3.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+Removed a total of 0 cells.
+
+3.19.6. Executing OPT_SHARE pass.
+
+3.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+
+3.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+
+3.19.10. Finished OPT passes. (There is nothing left to do.)
+
+3.20. Executing TECHMAP pass (map to technology primitives).
+
+3.20.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+3.20.2. Continuing TECHMAP pass.
+Using template $paramod$d4c0c20b0ee59f495e14575c4397dc0a6dd9e8e6\_90_alu for cells of type $alu.
+Using template $paramod$6df0329addda9228fcc2546de2aaf14ad26c98e1\_90_alu for cells of type $alu.
+Using template $paramod$59c4d9a723a469db99eee461ca4fdd9fae171b7b\_90_alu for cells of type $alu.
+Using extmapper maccmap for cells of type $macc.
+  add \s2_r[7] * 9'010110101 (16x9 bits, signed)
+  sub $mul$/home/suganth/verilog/dsp/ver1/source/dsp.v:354$80_Y [23:0] (24 bits, signed)
+  packed 1 (1) bits / 1 words into adder tree
+Using template $paramod$02488ff6fa51b28bbfa470bdd9b0e548b3357746\_90_alu for cells of type $alu.
+  add \s2_i[7] * 9'010110101 (16x9 bits, signed)
+  add \s2_i[5] * 9'010110101 (16x9 bits, signed)
+  add $auto$wreduce.cc:461:run$218 * 9'010110101 (32x9 bits, signed)
+  sub \s2_r[7] (16 bits, signed)
+  add \s2_r[5] * 9'010110101 (16x9 bits, signed)
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000010000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000011000 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000011000 for cells of type $fa.
+Using template $paramod$e82d3fc1811c5751348a3964470632b35a435fc7\_90_alu for cells of type $alu.
+Using template $paramod$fbc7873bff55778c0b3173955b7e4bce1d9d6834\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~5850 debug messages>
+
+3.21. Executing OPT pass (performing simple optimizations).
+
+3.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+<suppressed ~5450 debug messages>
+
+3.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+<suppressed ~1293 debug messages>
+Removed a total of 431 cells.
+
+3.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+Removed 1125 unused cells and 2873 unused wires.
+<suppressed ~1126 debug messages>
+
+3.21.5. Finished fast OPT passes.
+
+3.22. Executing ABC pass (technology mapping using ABC).
+
+3.22.1. Extracting gate netlist of module `\dsp' to `<abc-temp-dir>/input.blif'..
+Extracted 8891 gates and 9148 wires to a netlist network with 257 inputs and 256 outputs.
+
+3.22.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:      156
+ABC RESULTS:              NAND cells:      140
+ABC RESULTS:             ORNOT cells:      460
+ABC RESULTS:               NOT cells:      324
+ABC RESULTS:              XNOR cells:      873
+ABC RESULTS:                OR cells:     1000
+ABC RESULTS:               NOR cells:      932
+ABC RESULTS:            ANDNOT cells:     2528
+ABC RESULTS:               XOR cells:     1701
+ABC RESULTS:               MUX cells:      471
+ABC RESULTS:        internal signals:     8635
+ABC RESULTS:           input signals:      257
+ABC RESULTS:          output signals:      256
+Removing temp directory.
+
+3.23. Executing OPT pass (performing simple optimizations).
+
+3.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+<suppressed ~370 debug messages>
+
+3.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+<suppressed ~198 debug messages>
+Removed a total of 66 cells.
+
+3.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+Removed 0 unused cells and 3382 unused wires.
+<suppressed ~36 debug messages>
+
+3.23.5. Finished fast OPT passes.
+
+3.24. Executing HIERARCHY pass (managing design hierarchy).
+
+3.24.1. Analyzing design hierarchy..
+Top module:  \dsp
+
+3.24.2. Analyzing design hierarchy..
+Top module:  \dsp
+Removed 0 unused modules.
+
+3.25. Printing statistics.
+
+=== dsp ===
+
+   Number of wires:               8315
+   Number of wire bits:           9128
+   Number of public wires:          52
+   Number of public wire bits:     865
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               8519
+     $_ANDNOT_                    2526
+     $_AND_                        156
+     $_MUX_                        462
+     $_NAND_                       140
+     $_NOR_                        930
+     $_NOT_                        324
+     $_ORNOT_                      460
+     $_OR_                         998
+     $_XNOR_                       844
+     $_XOR_                       1679
+
+3.26. Executing CHECK pass (checking for obvious problems).
+Checking module dsp...
+Found and reported 0 problems.
+
+4. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFFNEGX1 (noninv, pins=3, area=384.00) is a direct match for cell type $_DFF_N_.
+  cell DFFPOSX1 (noninv, pins=3, area=384.00) is a direct match for cell type $_DFF_P_.
+  cell DFFSR (noninv, pins=5, area=704.00) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    \DFFNEGX1 _DFF_N_ (.CLK( C), .D( D), .Q( Q));
+    \DFFPOSX1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    unmapped dff cell: $_DFF_PN0_
+    unmapped dff cell: $_DFF_PN1_
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \DFFSR _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .R( R), .S( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+4.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\dsp':
+
+5. Executing OPT pass (performing simple optimizations).
+
+5.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+<suppressed ~5 debug messages>
+
+5.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+Removed a total of 0 cells.
+
+5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dsp..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dsp.
+Performed a total of 0 changes.
+
+5.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+Removed a total of 0 cells.
+
+5.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~1 debug messages>
+
+5.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+
+5.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dsp..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+5.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dsp.
+Performed a total of 0 changes.
+
+5.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+Removed a total of 0 cells.
+
+5.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+
+5.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+
+5.16. Finished OPT passes. (There is nothing left to do.)
+
+6. Executing ABC pass (technology mapping using ABC).
+
+6.1. Extracting gate netlist of module `\dsp' to `<abc-temp-dir>/input.blif'..
+Extracted 8515 gates and 8773 wires to a netlist network with 257 inputs and 256 outputs.
+
+6.1.1. Executing ABC.
+Running ABC command: "/usr/local/share/qflow/bin/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFNEGX1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFPOSX1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFSR".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "LATCH".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "PADINOUT".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUFX1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUFX2".
+ABC: Scl_LibertyReadGenlib() skipped cell "PADFC" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADNC" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADVDD" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADGND" without logic function.
+ABC: Library "osu035_stdcells" from "/usr/local/share/qflow/tech/osu035/osu035_stdcells.lib" has 28 cells (11 skipped: 4 seq; 3 tri-state; 4 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.51 MB. Time =     0.00 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "FAX1").
+ABC: + strash 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + ifraig 
+ABC: + retime 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + map -M 1 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+6.1.2. Re-integrating ABC results.
+ABC RESULTS:           OAI22X1 cells:       36
+ABC RESULTS:            MUX2X1 cells:       14
+ABC RESULTS:           AOI22X1 cells:      131
+ABC RESULTS:            NOR3X1 cells:      228
+ABC RESULTS:           NAND3X1 cells:     1381
+ABC RESULTS:           AOI21X1 cells:     1079
+ABC RESULTS:            AND2X2 cells:      312
+ABC RESULTS:            NOR2X1 cells:      946
+ABC RESULTS:            XOR2X1 cells:      174
+ABC RESULTS:             OR2X2 cells:      191
+ABC RESULTS:           XNOR2X1 cells:      476
+ABC RESULTS:             INVX1 cells:     1705
+ABC RESULTS:           NAND2X1 cells:     2020
+ABC RESULTS:           OAI21X1 cells:     2313
+ABC RESULTS:        internal signals:     8260
+ABC RESULTS:           input signals:      257
+ABC RESULTS:          output signals:      256
+Removing temp directory.
+
+7. Executing FLATTEN pass (flatten design).
+
+8. Executing SETUNDEF pass (replace undef values with defined constants).
+Removed 0 unused cells and 8791 unused wires.
+
+9. Executing IOPADMAP pass (mapping inputs/outputs to IO-PAD cells).
+Don't map input port dsp.ifft: Missing option -inpad.
+Don't map input port dsp.x0_i: Missing option -inpad.
+Don't map input port dsp.x0_r: Missing option -inpad.
+Don't map input port dsp.x1_i: Missing option -inpad.
+Don't map input port dsp.x1_r: Missing option -inpad.
+Don't map input port dsp.x2_i: Missing option -inpad.
+Don't map input port dsp.x2_r: Missing option -inpad.
+Don't map input port dsp.x3_i: Missing option -inpad.
+Don't map input port dsp.x3_r: Missing option -inpad.
+Don't map input port dsp.x4_i: Missing option -inpad.
+Don't map input port dsp.x4_r: Missing option -inpad.
+Don't map input port dsp.x5_i: Missing option -inpad.
+Don't map input port dsp.x5_r: Missing option -inpad.
+Don't map input port dsp.x6_i: Missing option -inpad.
+Don't map input port dsp.x6_r: Missing option -inpad.
+Don't map input port dsp.x7_i: Missing option -inpad.
+Don't map input port dsp.x7_r: Missing option -inpad.
+Mapping port dsp.y0_i using BUFX2.
+Mapping port dsp.y0_r using BUFX2.
+Mapping port dsp.y1_i using BUFX2.
+Mapping port dsp.y1_r using BUFX2.
+Mapping port dsp.y2_i using BUFX2.
+Mapping port dsp.y2_r using BUFX2.
+Mapping port dsp.y3_i using BUFX2.
+Mapping port dsp.y3_r using BUFX2.
+Mapping port dsp.y4_i using BUFX2.
+Mapping port dsp.y4_r using BUFX2.
+Mapping port dsp.y5_i using BUFX2.
+Mapping port dsp.y5_r using BUFX2.
+Mapping port dsp.y6_i using BUFX2.
+Mapping port dsp.y6_r using BUFX2.
+Mapping port dsp.y7_i using BUFX2.
+Mapping port dsp.y7_r using BUFX2.
+
+10. Executing OPT pass (performing simple optimizations).
+
+10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+
+10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+Removed a total of 0 cells.
+
+10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dsp..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dsp.
+Performed a total of 0 changes.
+
+10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dsp'.
+Removed a total of 0 cells.
+
+10.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dsp..
+
+10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dsp.
+
+10.9. Finished OPT passes. (There is nothing left to do.)
+
+11. Executing Verilog backend.
+
+11.1. Executing BMUXMAP pass.
+
+11.2. Executing DEMUXMAP pass.
+Dumping module `\dsp'.
+
+12. Printing statistics.
+
+=== dsp ===
+
+   Number of wires:              10799
+   Number of wire bits:          11519
+   Number of public wires:       10799
+   Number of public wire bits:   11519
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              11262
+     AND2X2                        312
+     AOI21X1                      1079
+     AOI22X1                       131
+     BUFX2                         256
+     INVX1                        1705
+     MUX2X1                         14
+     NAND2X1                      2020
+     NAND3X1                      1381
+     NOR2X1                        946
+     NOR3X1                        228
+     OAI21X1                      2313
+     OAI22X1                        36
+     OR2X2                         191
+     XNOR2X1                       476
+     XOR2X1                        174
+
+Warnings: 6 unique messages, 6 total
+End of script. Logfile hash: 99a90d1bd8, CPU: user 2.25s system 0.02s, MEM: 71.80 MB peak
+Yosys 0.33 (git sha1 2584903a060)
+Time spent: 40% 2x abc (1 sec), 20% 26x opt_expr (0 sec), ...
+Running getpowerground to determine power and ground net names.
+getpowerground.tcl  /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef
+Running vlogFanout
+vlogFanout -l 200 -c 30 -I dsp_nofanout -s nullstring -p /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib -b BUFX2,CLKBUF1 -i A,A -o Y,Y dsp_mapped.v dsp_sized.v
+
+vlogFanout for qflow 1.4.104
+Parsing library "osu035_stdcells"
+End of library at line 6636
+Lib Read:  Processed 6637 lines.
+Top internal fanout is 537 (load 11482.7) from node _5492_,
+driven by INVX1 with strength 102.797 (fF driven at latency 200)
+Top fanout load-to-strength ratio is 111.703 (latency = 22340.5 ps)
+Top input node fanout is 527 (load 11364.7) from node ifft.
+0 gates exceed specified minimum load.
+143 buffers were added.
+Warning 1: load of 11492.7 is 13.7669 times greater than strongest gate INVX8
+This warning will only be repeated for larger overload ratios.  Warning count reflects
+the total number of overloaded nets.
+134 gates were changed.
+
+Gate counts by drive strength:
+
+	"1" gates	In: 10503    	Out: 10369    	-134
+	"2" gates	In: 902    	Out: 1020    	+118
+
+1394 gates exceed specified minimum load.
+16 buffers were added.
+0 gates were changed.
+
+Gate counts by drive strength:
+
+	"1" gates	In: 10503    	Out: 10369    	-134
+	"2" gates	In: 918    	Out: 1036    	+118
+
+Number of gates changed: 16
+Running vlog2Verilog for antenna cell mapping.
+vlog2Verilog -c -p -v vdd -g gnd  -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef 
+   -o dsp.v dsp_sized.v
+
+Generating RTL verilog and SPICE netlist file in directory
+	 /home/suganth/verilog/dsp/ver1/synthesis
+Files:
+   Verilog: /home/suganth/verilog/dsp/ver1/synthesis/dsp.rtl.v
+   Verilog: /home/suganth/verilog/dsp/ver1/synthesis/dsp.rtlnopwr.v
+   Verilog: /home/suganth/verilog/dsp/ver1/synthesis/dsp.rtlbb.v
+   Spice:   /home/suganth/verilog/dsp/ver1/synthesis/dsp.spc
+
+Running vlog2Verilog.
+vlog2Verilog -c -v vdd -g gnd  -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef 
+	-o dsp.rtl.v
+   dsp.v
+vlog2Verilog -c -p -v vdd -g gnd  -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef 
+	-o dsp.rtlnopwr.v
+   dsp.v
+/usr/local/share/qflow/bin/vlog2Verilog -c -p -b -n -v vdd -g gnd  -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef
+   -o dsp.rtlbb.v
+Running vlog2Spice.
+vlog2Spice -i -l  /usr/local/share/qflow/tech/osu035/osu035_stdcells.sp -o dsp.spc dsp.rtl.v
+Running spi2xspice.py
+spi2xspice.py "/usr/local/share/qflow/tech/osu035/osu035_stdcells.lib" dsp.spc dsp.xspice
+
+Synthesis script ended on Monday 10 August 2026 11:34:03 AM IST

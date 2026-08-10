@@ -1,0 +1,17 @@
+read_verilog dsp.v
+
+hierarchy -top dsp
+
+proc
+opt
+memory
+opt
+
+techmap
+opt
+
+abc -liberty /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib
+
+clean
+
+write_verilog -noattr dsp_netlist.v
